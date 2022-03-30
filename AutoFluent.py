@@ -1,13 +1,11 @@
 from selenium import webdriver
-from selenium import *
-import time
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import json
 from webdriver_manager.chrome import ChromeDriverManager
-import json
+import time
 
 """
 Kit de commandes:
