@@ -112,7 +112,6 @@ def appuyerRestart(driver):
     return(+len (driver.find_elements(By.CLASS_NAME, ("QuizProgressLine__item")))-len (driver.find_elements(By.CLASS_NAME, ("QuizProgressLine__item_answered_wrong")))-len (driver.find_elements(By.CLASS_NAME, ("QuizProgressLine__item_answered_correct"))))
 
 def repondre(ans2,driver):
-    print(ans2)
     time.sleep(0.2)
     for i in range(len(ans2)):
         rep=[]
@@ -210,7 +209,6 @@ def programme(i):
     driver=ouvrirGoFluent(Id[i],Mdp[i])
     Llinks=ensLinks(driver)
     ans=cleanList(driver,Llinks)
-    print(ans)
     for n in range(len(Llinks)):
         driver.get(Llinks[n])
         time.sleep(2)
