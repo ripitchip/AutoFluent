@@ -65,14 +65,10 @@ def ensLinks(driver):
             #driver.execute_script("window.open('');")
             #driver.switch_to.window(driver.window_handles[1+len(Llinks)])
     return(Llinks)
-    
-
-
-    return(Llinks)
 
 def reponseDuLog(driver):
     driver.refresh()
-    time.sleep(2.5)
+    time.sleep(3)
     rep=[]
     browser_log = driver.get_log('performance')
     events = [process_browser_log_entry(entry) for entry in browser_log]
