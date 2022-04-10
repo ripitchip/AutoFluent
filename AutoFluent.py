@@ -23,7 +23,6 @@ def process_browser_log_entry(entry):
 latence=0.5
 
 def ouvrirGoFluent(Id,Mdp):
-    path = "C:\Program Files (x86)\chromedriver.exe"
     caps = DesiredCapabilities.CHROME
     caps['goog:loggingPrefs'] = {'performance': 'ALL'}
     options = webdriver.ChromeOptions()
