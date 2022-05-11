@@ -3,8 +3,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-import json
 from webdriver_manager.chrome import ChromeDriverManager
+import json
 import time
 
 """
@@ -64,6 +64,10 @@ def ensLinks(driver):
             #driver.execute_script("window.open('');")
             #driver.switch_to.window(driver.window_handles[1+len(Llinks)])
     return(Llinks)
+    
+
+
+    return(Llinks)
 
 def reponseDuLog(driver):
     driver.refresh()
@@ -105,6 +109,7 @@ def appuyerRestart(driver):
     return(+len (driver.find_elements(By.CLASS_NAME, ("QuizProgressLine__item")))-len (driver.find_elements(By.CLASS_NAME, ("QuizProgressLine__item_answered_wrong")))-len (driver.find_elements(By.CLASS_NAME, ("QuizProgressLine__item_answered_correct"))))
 
 def repondre(ans2,driver):
+    print (ans2)
     time.sleep(0.2)
     for i in range(len(ans2)):
         rep=[]
@@ -217,8 +222,19 @@ def programme(i):
             repondre(ans2,driver)
     close(driver)
 
-Id=[]
-Mdp=[]
+Id=["thomas.derudder@edu.devinci.fr","basile.puiseux@edu.devinci.fr","ines.giorgi@edu.devinci.fr","manal.bougrine@edu.devinci.fr","julien.haudebourg@edu.devinci.fr ","aurore.kermel@edu.devinci.fr","iness.haddad@edu.devinci.fr"]
+Mdp=["VerySecure01","hianww3xeD","Ch4tonminou","M@n@lhib@2002","Juju.178900","Ie1f1pcqseadlb++","#GJJaq0H{0C"]
 
-for i in range(len(Id)):
-    programme(i)
+i=0
+def gofluent():
+    for i in range(len(Id)):
+                programme(i)
+
+
+while i<10:
+    try:
+        gofluent()
+        break
+    except:
+        i+=1
+        print(f"{i} | crash du programme, relancement")
