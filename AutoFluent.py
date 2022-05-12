@@ -229,7 +229,9 @@ i=0
 a=0
 def gofluent(elem):
     for i in range(len(Id)):
-        programme(i)
+        programme(0)
+        del Id[0]
+        del Mdp[0]
     
 
 
