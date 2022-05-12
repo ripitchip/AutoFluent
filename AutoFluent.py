@@ -222,13 +222,15 @@ def programme(i):
             repondre(ans2,driver)
     close(driver)
 
-Id=["thomas.derudder@edu.devinci.fr","basile.puiseux@edu.devinci.fr","ines.giorgi@edu.devinci.fr","manal.bougrine@edu.devinci.fr","julien.haudebourg@edu.devinci.fr ","aurore.kermel@edu.devinci.fr","iness.haddad@edu.devinci.fr"]
-Mdp=["VerySecure01","hianww3xeD","Ch4tonminou","M@n@lhib@2002","Juju.178900","Ie1f1pcqseadlb++","#GJJaq0H{0C"]
+Id=[]
+Mdp=[]
 
 i=0
-def gofluent():
+a=0
+def gofluent(elem):
     for i in range(len(Id)):
-                programme(i)
+        programme(i)
+    
 
 
 while i<10:
